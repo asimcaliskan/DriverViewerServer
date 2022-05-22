@@ -5,12 +5,10 @@ from PIL import Image
 import io
 import numpy as np
 import cv2
-from hand_pose import get_head_pose_estimation
+from head_pose import get_head_pose_estimation
 from drowsiness_detection import get_drowsiness_estimation
 
 app = Flask(__name__)
-
-
 
 @app.route('/')
 def index():

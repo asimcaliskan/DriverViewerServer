@@ -11,7 +11,7 @@ mp_drawing = mp.solutions.drawing_utils
 
 drawing_spec = mp_drawing.DrawingSpec(thickness=1, circle_radius=1)
 
-def get_head_pose_estimation(image):
+def is_looking_forward(image):
     image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
     image.flags.writeable = False
     results = face_mesh.process(image)

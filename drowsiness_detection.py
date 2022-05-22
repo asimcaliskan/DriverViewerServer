@@ -21,7 +21,7 @@ thicc=2
 rpred=[99]
 lpred=[99]
 
-def get_drowsiness_estimation(frame):
+def is_drowsiness(frame):
     global count, score, thicc, rpred, lpred, lbl
     height,width = frame.shape[:2]
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
